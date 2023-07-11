@@ -1,0 +1,56 @@
+                                          ********* MongoDB *********
+
+1). It's a non-relational, document-oriented database management system and works on documents-based database.
+2). MongoDB stores data in form of documents.
+3). MongoDB uses BSON to query database.
+4). MongoDB use Database and we say it is collection.
+5). MongoDB Delivers NoSQL FLexibility and Scalability to developers.
+
+commands :-    CRUD Operation
+		1). mongo
+		2). show dbs
+		3). use database
+				CREATE()
+		4). db.collections.insertOne({Name:"data",Id:int,Designation:"data",active:true})
+		5). show dbs
+		6). db
+		7). show collections
+		8). db.collections_name.find()
+		9). db.collections_name.find().pretty()
+		10).db.collections_name.insertMany([{},{},{},{}])
+		11).db.collections_name.find().pretty()
+		12).db.collections_name.find()
+				READ()
+		13).db.collections_name.find(query,projection)
+		14).db.collections_name.find({name:"Data"})
+		15).db.collections_name.find({name:"Data"}).pretty()
+		16).db.collections_name.find({name:"Data"},{name:1}).pretty()
+		16-'.db.employee1.find({name:"Rahul"},{name:1}).pretty()
+		17).db.collections_name.find({name:"Data"},{_id:0,name:1}).pretty()
+		18).db.collections_name.find({active:true}).pretty()
+		19).db.collections_name.find({active:true}).pretty().limit(1)
+		20).db.collections_name.find({active:true}).pretty().limit(2)
+		21).db.collections_name.findOne({active:true})
+		22).db.collections_name.find({active:true}).pretty().limit(1).skip(1)
+				Update()
+		23).Syntax:-UpdateOne()=>db.COLLECTION_NAME.updateOne(<filter>,<update>)
+		24).Syntax:-UpdateMany()=>db.COLLECTION_NAME.update(<filter>,<update>)
+		25) db.employee1.updateOne({name:"Data"}, {$set:{Designation:"Intern"}})
+		26).db.collections_name.find().pretty()
+		27).db.employee1.updateMany({Designation:"Intern"},{$set: {active:false}})
+		28).db.collections_name.find().pretty()
+				DELETE()
+		29)Syntax:-deleteMany()=>db.collection_name.deleteMany(DELLETION_CRITTERIA)
+		30)db.employee1.deleteMany({Designation:"Intern"})	
+		31)db.employee1.find().pretty()
+		32)show collections
+		33)db.employee.deleteMany({})
+		34)db.employee.find().pretty()
+			how to delete collection
+		35)show collections
+		36).db.employee.drop()
+			how to delete database
+		37).use database_name
+		38).db.dropDatabase()
+
+
